@@ -6,7 +6,7 @@ pipeline {
     }
 
     tools {
-        maven 'Maven 3.9.10' // match your Jenkins config
+        maven 'Maven 3.9.10'
         jdk 'jdk24'
     }
 
@@ -19,25 +19,25 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean package -DskipTests'
+                bat 'mvn clean package -DskipTests'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
 
         stage('Docker Build') {
             steps {
-                sh 'docker build -t $DOCKER_IMAGE .'
+                bat 'docker build -t %DOCKER_IMAGE% .'
             }
         }
 
         stage('Docker Run') {
             steps {
-                sh 'docker run -d -p 8080:8080 --name standings-service $DOCKER_IMAGE'
+                bat 'docker run -d -p 8080:8080 --name standings-service %DOCKER_IMAGE%'
             }
         }
     }
