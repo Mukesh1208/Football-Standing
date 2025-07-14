@@ -22,7 +22,6 @@ This project provides a Spring Boot-based REST API to fetch and display football
 - Spring Boot 3.x
 - Swagger / OpenAPI (Springdoc)
 - Maven
-- No third-party JSON libraries or databases used
 
 ---
 
