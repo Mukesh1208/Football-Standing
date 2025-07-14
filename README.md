@@ -54,3 +54,38 @@ This project provides a Spring Boot-based REST API to fetch and display football
 
 **Endpoint**:  
 `GET /api/standings?country=England&league=Premier League&team=Chelsea`
+
+## Sample Response
+{
+  "country": "England",
+  "countryId": "41",
+  "league": "Premier League",
+  "leagueId": "149",
+  "team": "Chelsea",
+  "teamId": "2612",
+  "overallLeaguePosition": "12"
+}
+
+
+## CI/CD Pipeline
+
+## Jenkins Setup
+
+The Jenkinsfile defines a pipeline for:
+
+Code checkout
+
+Maven build/test
+
+Docker image build and run
+
+Ensure jdk24 and Maven 3.9.10 are configured in Jenkins Global Tool Configuration.
+
+## Docker Setup
+
+Dockerfile provided at root.
+
+Run with:
+     docker build -t football-standings-service .
+     docker run -d -p 8080:8080 football-standings-service
+
