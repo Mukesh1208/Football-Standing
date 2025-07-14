@@ -1,0 +1,7 @@
+com\football\model\TeamStandingResponse$Team.class
+com\football\model\TeamStandingResponse$Country.class
+com\football\Application.class
+com\football\service\StandingsService.class
+com\football\model\TeamStandingResponse.class
+com\football\controller\StandingsController.class
+com\football\model\TeamStandingResponse$League.class
